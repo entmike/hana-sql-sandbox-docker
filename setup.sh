@@ -1,5 +1,9 @@
+#!/bin/sh
+echo "Starting Servers..."
 mkdir -p /run/nginx
 rm /etc/nginx/sites-enabled/default
+echo "Starting nginx..."
 nginx
 cd /hana-sql-sandbox-backend
-npm run prod &
+echo "Starting backend..."
+npm run prod 
