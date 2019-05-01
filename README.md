@@ -1,3 +1,7 @@
+[![GitHub issues](https://img.shields.io/github/issues/entmike/hana-sql-sandbox-docker.svg)](https://github.com/entmike/hana-sql-sandbox-docker/issues)
+[![Docker Pulls](https://img.shields.io/docker/pulls/entmike/hana-sql-sandbox.svg)](https://hub.docker.com/r/entmike/hana-sql-sandbox/)
+[![Automated Build](https://img.shields.io/docker/automated/entmike/hana-sql-sandbox.svg)](https://hub.docker.com/r/entmike/hana-sql-sandbox/)
+
 # Summary
 This Docker Image can be used to run a container that will connect to a HANA DB and let you run simple SQL Statements to a HANA DB.
 
