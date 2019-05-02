@@ -11,6 +11,7 @@ if [ ! -f ./jupyterconfigured ]; then
 	su -l jupyteradm -c "pip install --user pipenv"
 	su -l jupyteradm -c "pipenv install jupyterlab sqlalchemy sqlalchemy-hana ipython-sql"
 	su -l jupyteradm -c "pipenv run jupyter-lab --generate-config"
+        su -l jupyteradm -c "mkdir ~/notebooks"
 	touch jupyterconfigured
 else
 	echo "Jupyter setup already run."
