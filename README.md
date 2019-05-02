@@ -42,6 +42,7 @@ docker run -t --name hana-sbx-jupyter \
 -p 8888:80 \
 -p 8899:8888 \
 -v /path/to/your/software:/software
+-v /optionalpath/topersist/yournotebooks:/home/jupyteradm/notebooks
 -e HANA_SERVER=myhanabox.example.com \
 -e HANA_PORT=39017 \
 -e HANA_USER=SYSTEM \
