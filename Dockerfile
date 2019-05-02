@@ -28,7 +28,7 @@ RUN npm run build
 # Configure nginx and startup
 COPY ./server.conf /etc/nginx/conf.d/default.conf
 WORKDIR /app
-# COPY ./setup.sh /app/setup.sh
+# Launcher Script
 COPY ./setup.sh /app/setup.sh
 RUN chmod +x ./setup.sh
 # Jupyter Setup
