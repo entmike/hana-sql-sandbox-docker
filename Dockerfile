@@ -36,7 +36,9 @@ COPY ./jupyter-setup.sh /app/jupyter-setup.sh
 RUN chmod +x ./jupyter-setup.sh
 RUN ./jupyter-setup.sh
 # HDB CLient Setup
+COPY ./hanaclient-2.4.126-linux-x64.tar.gz /app/hanaclient-2.4.126-linux-x64.tar.gz
 COPY ./hdbclient-setup.sh /app/hdbclient-setup.sh
 RUN chmod +x ./hdbclient-setup.sh
+RUN ./hdbclient-setup.sh
 ENTRYPOINT [ "/bin/bash" ]
 CMD [ "/app/setup.sh" ]

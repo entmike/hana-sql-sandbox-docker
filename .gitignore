@@ -1,6 +1,7 @@
 .DS_Store
 node_modules
 /dist
+hanaclient-2.4.126-linux-x64.tar.gz
 
 # local env files
 .env.local
