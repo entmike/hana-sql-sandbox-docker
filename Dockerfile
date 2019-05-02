@@ -31,5 +31,12 @@ WORKDIR /app
 # COPY ./setup.sh /app/setup.sh
 COPY ./setup.sh /app/setup.sh
 RUN chmod +x ./setup.sh
+# Jupyter Setup
+COPY ./jupyter-setup.sh /app/jupyter-setup.sh
+RUN chmod +x ./jupyter-setup.sh
+RUN ./jupyter-setup.sh
+# HDB CLient Setup
+COPY ./hdbclient-setup.sh /app/hdbclient-setup.sh
+RUN chmod +x ./hdbclient-setup.sh
 ENTRYPOINT [ "/bin/bash" ]
 CMD [ "/app/setup.sh" ]
