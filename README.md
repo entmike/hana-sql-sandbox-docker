@@ -25,23 +25,15 @@ It is based on a Ubuntu image, and runs 2 modules that you can read more about h
 ![Example Simple Vue Frontend](images/example2.png)
 
 *Example Vue Frontend working with HANA Express Docker Container*
-# Installation 
-## Pre-requisite for Jupyter Notebook
-Optional, unless you want to use the Jupyter Notebook.  If so, you **must** follow these quick and easy steps.
-
-1) Visit https://tools.hana.ondemand.com/#hanatools and download the Linux HANA Client hanaclient-x.y.z-linux-x64.tar.gz file.  You must accept the SAP License agreement to initiate the download.
-2) On your host machine that will be running docker, create a folder called `software`.
-3) Inside the `software` folder, create a folder called `hanaclient` and copy the downloaded file to this folder.
 
 # Usage Examples
 
 ## Running with a Jupyter Notebook
 From a Terminal/Command Prompt/PowerShell/ssh session run:
 ```
-docker run -t --name hana-sbx-jupyter \
+docker run -t --rm \
 -p 8888:80 \
 -p 8899:8888 \
--v /path/to/your/software:/software
 -v /optionalpath/topersist/yournotebooks:/home/jupyteradm/notebooks
 -e HANA_SERVER=myhanabox.example.com \
 -e HANA_PORT=39017 \
@@ -73,7 +65,6 @@ docker run -t --rm --network SharedDockerNetwork \
 -e HANA_PORT=39017 \
 -e HANA_USER=SYSTEM \
 -e HANA_PW=MySecretPassword \
--v /path/to/your/software:/software
 entmike/hana-sql-sandbox:latest
 ```
 *In this example, both this container and the HANA Express Container are expected to be running in Docker network `SharedDockerNetwork`.  The `HANA_SERVER` parameter will be the Container Name of your HANA Express Container.*
